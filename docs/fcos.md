@@ -39,7 +39,7 @@ systemd:
 
 ### Prepare
 
-Prepare ignition and serve via http (a.e. python -m SimpleHTTPServer )
+Prepare ignition and serve via http (a.e. python -m http.server )
 
 ```json
 {
@@ -50,10 +50,9 @@ Prepare ignition and serve via http (a.e. python -m SimpleHTTPServer )
   "passwd": {
     "users": [
       {
-        "name": "adi",
-        "passwordHash": "$1$.RGu8J4x$U7uxcOg/eotTEIRxhk62I0",
+        "name": "ansibleUser",
         "sshAuthorizedKeys": [
-          "ssh-rsa ..fillyouruser"
+          "ssh-rsa ..publickey.."
         ],
         "groups": [ "wheel" ]
       }
